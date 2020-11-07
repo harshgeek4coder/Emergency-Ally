@@ -24,10 +24,14 @@
                     <li class="list-group-item list-group-item-success text-center">{{category.replace('_', ' ').title()}}</li>
                     {% if category.replace('_', ' ').title() == "Medical Help" %}
                         <p>We Suggest You To DIAL 104 HEALTH HELPLINE NUMBER</p>
-                    {%else if category.replace('_', ' ').title() == "Infrastructure Related" %}
+                    {% elif category.replace('_', ' ').title() == "Medical Products" %}
+                        <p>We Suggest You To Check Nearby Pharmacies</p>
+                    {% elif category.replace('_', ' ').title() == "Infrastructure Related" %}
                         <p>How To Stay Safe During Natural Disaster</p>
+                    {% elif category.replace('_', ' ').title() == "Hospitals" %}
+                        <p>We Recommend You To Check Nearby Hospitals</p>
                     {% endif %}
-                    {% endif %}
+
 
 
 

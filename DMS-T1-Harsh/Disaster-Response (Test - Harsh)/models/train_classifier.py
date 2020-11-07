@@ -17,7 +17,6 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.svm import LinearSVC
-from xgboost import XGBClassifier
 
 def load_data(database_filepath):
     '''
@@ -63,11 +62,11 @@ def build_model():
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
-        ('clf', MultiOutputClassifier(OneVsRestClassifier(XGBClassifier(random_state=0))))
+        ('clf', MultiOutputClassifier(OneVsRestClassifier(LinearSVC(random_state = 0))))
     ])
     parameters = {
-                'tfidf__smooth_idf':[True, False]
-
+                'tfidf__smooth_idf':[True, False],
+                'clf__estimator__estimator__C': [1, 2, 5]
              }
     cv = GridSearchCV(pipeline, param_grid=parameters, scoring='precision_samples', cv = 5)
     return cv
