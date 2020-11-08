@@ -74,7 +74,7 @@ Harsh Sharma
 Akshat Anand
 
 <p align="center">
-<img src = ""  height="120" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-/blob/main/images/akshat1.jpg"  height="120" alt="Your Name Here (Insert Your Image Link In Src">
 </p>
 <p align="center">
 <a href = "https://github.com/person1"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
