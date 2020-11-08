@@ -46,6 +46,7 @@
     `python run.py`
 
 3. Run at http://0.0.0.0:3001/
+NOTE : If the 3rd Step Doesn't Work , Try Running at  http://localhost:3001/
 <br>
 
 ## Contributors
