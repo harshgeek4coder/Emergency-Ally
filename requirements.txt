@@ -116,6 +116,5 @@ Werkzeug==1.0.1
 widgetsnbextension==3.5.1
 wincertstore==0.2
 wrapt==1.11.2
-xgboost==1.2.1
 gunicorn==19.9.0
 
