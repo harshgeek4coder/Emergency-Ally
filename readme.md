@@ -6,7 +6,11 @@
 ---
 
 ## Preview
-- Add pictures or important highlights from the Project (if any)
+- <img src="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-/blob/main/images/1.png">
+- <img src="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-/blob/main/images/pi2.png">
+- <img src="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-/blob/main/images/pi3.png">
+- <img src="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-/blob/main/images/pi4.png">
+- <img src="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-/blob/main/images/pi5.png">
 ## Functionalities
 - [x]  Input Emergency
 - [x]  Classification of emergency:Classifies your emergency to a bunch of other related emergency types 
@@ -14,7 +18,35 @@
 - [x]  Location Based Results:Gives you location based suggestions of nearest help centers and their contact information.
 
 <br>
+## File Description
 
+    .
+    ├── app     
+    │   ├── run.py                           # Flask file that runs app
+    │   └── templates   
+    │       ├── go.html                      # Classification result page of web app
+    │       └── master.html                  # Main page of web app    
+    ├── data                   
+    │   ├── disaster_categories.csv          # Dataset including all the categories  
+    │   ├── disaster_messages.csv            # Dataset including all the messages
+    │   └── process_data.py                  # Data cleaning
+    ├── models
+    │   └── train_classifier.py              # Train ML model           
+    └── README.md
+
+### Instructions: (Run run.py directly if DisasterResponse.db and claasifier.pkl already exist.)
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
+2. Run the following command in the app's directory to run your web app.
+    `python run.py`
+
+3. Run at http://0.0.0.0:3001/
+<br>
 
 ## Contributors
 
