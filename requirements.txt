@@ -22,7 +22,6 @@ entrypoints==0.3
 et-xmlfile==1.0.1
 filelock==3.0.12
 Flask==1.1.2
-Flask-SQLAlchemy @ file:///tmp/build/80754af9/flask-sqlalchemy_1596836624296/work
 future==0.18.2
 gast==0.3.3
 geocoder==1.38.1
