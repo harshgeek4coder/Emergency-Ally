@@ -1,6 +1,6 @@
 <p align="center">
 	<h1 align="center"> Emergency Ally </h2>
-	<h4 > 2020 has been a rough year. We started with a wildfire in Australia , saw half of our world die due to COVID, migrant workers moved across states in our country,skies in California turned orange as the state choked up the fire fumes and what not. We have faced every calamity possible in this year and we , Team Myth Busters think , it would be stupid not to prepare ourselves for the future. So, lo and behold , Emergency Ally, a smart website designed to always be there for you in the time of emergency and get you out of it as soon as possible. <h4>
+	<h4 > 2020 has been a rough year. We started with a wildfire in Australia , saw half of our world die due to COVID, migrant workers moved across states in our country,skies in California turned orange as the state choked up the fire fumes and what not. We have faced every calamity possible in this year and we , Team Myth Busters think , it would be stupid not to prepare ourselves for the future. So, lo and behold , Emergency Ally, a smart website designed to always be there for you in the time of emergency and get you out of it as soon as possible. <h4>Built using Natural Language Processing and Machine Learning,Emergency Ally is a Comprehensive Web App which can help you provide SOS or Emergency Level Solutions , In Case You encounter or see someone in any Danger or Disaster Situtations. 
 </p>
 
 ---
@@ -45,7 +45,7 @@
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Run at http://0.0.0.0:3001/
+3. Run at http://0.0.0.0:3001/ <br>
 NOTE : If the 3rd Step Doesn't Work , Try Running at  http://localhost:3001/
 <br>
 
