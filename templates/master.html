@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Emergency Ally</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=Red+Rose:wght@600&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=Chonburi&family=Red+Rose:wght@600&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+</head>
+
+
+
+<body style="    font-family: 'Red Rose', cursive;">
+
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+        <a class="navbar-brand" href="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-" style="font-size:2rem;font-family: 'Righteous', cursive;">MythBusters</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/harshgeek4coder/SLAC-2.0-Hackathon-Team-Myth-Busters-">About App</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+
+
+
+
+
+    <div>
+        <center>
+            <h1 class="text-center" style="font-family: 'Black Ops One', cursive;font-size: 6rem;padding-top:2rem;color: rgb(14, 105, 121);">Emergency Ally</h1>
+            <h3 style="font-family: 'Chonburi', cursive;color: rgb(40, 188, 214);">A bridge between your SOS message and the concerned authorities.</h3>
+            <img src="https://i.ibb.co/xjzvLk8/clip-1026.png" alt="clip-1026" border="0"></center>
+        <br><br>
+        <div class="container-flex" style="margin-top:2rem;background-color:#2bbbad;padding: 3rem;">
+            <h2 style="font-family: 'Righteous', cursive;color: #fff;" class="text-center">We will analyze your message and direct you towards the right emergency department!</h2>
+            <hr />
+            <br><br>
+            <div class="row">
+
+                <div class="col-lg-12 form-group-lg">
+                    <form action="/go" method="get">
+                        <center> <input style="width: 60%;" type="text" class="form-control form-control-lg" name="query" placeholder="Enter your message here..."></center>
+                        <br>
+
+                        <div class="col-lg-offset-5">
+                            <button type="submit" class="btn btn-lg btn-danger" style="font-size:1.5rem;">Classify message</button>
+                        </div>
+                        <br><br>
+                    </form>
+                    <center><img src="https://i.ibb.co/YPZRDMy/clip-doc-i-need-your-help-removebg-preview-1.png" alt="clip-doc-i-need-your-help-removebg-preview-1" style="width:30%;" border="0">
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        {% block content %}
+        <div class="page-header">
+            <h1 style="font-family: 'Righteous', cursive;color: rgb(11, 120, 139);" class="text-center">Result of training dataset</h1>
+        </div>
+        {% endblock %} {% for id in ids %}
+        <div id="{{id}}"></div>
+        {% endfor %}
+    </div>
+
+    <script type="text/javascript">
+        const graphs = {
+            {
+                graphJSON | safe
+            }
+        };
+        const ids = {
+            {
+                ids | safe
+            }
+        };
+        for (let i in graphs) {
+            Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
+        }
+    </script>
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+
+</html>
