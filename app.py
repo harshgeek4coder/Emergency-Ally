@@ -14,10 +14,12 @@ from flask import render_template, request
 from plotly.graph_objs import Bar
 ##from sklearn.externals import joblib
 from sqlalchemy import create_engine
+
 ##from SQLALchemy import create_engine
 
 
 app = Flask(__name__)
+
 
 def tokenize(text):
     tokens = word_tokenize(text)
@@ -29,6 +31,7 @@ def tokenize(text):
         clean_tokens.append(clean_tok)
 
     return clean_tokens
+
 
 # load data
 engine = create_engine('sqlite:///data/DisasterResponse.db')
@@ -42,7 +45,6 @@ model = joblib.load("models/classifier.pkl")
 @app.route('/')
 @app.route('/index')
 def index():
-
     # extract data needed for visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
@@ -54,10 +56,9 @@ def index():
         category_counts.append(np.sum(df[column_name]))
 
     # extract data exclude related
-    categories = df.iloc[:,4:]
+    categories = df.iloc[:, 4:]
     categories_mean = categories.mean().sort_values(ascending=False)[1:11]
     categories_names = list(categories_mean.index)
-
 
     # create visuals
     graphs = [
@@ -124,6 +125,7 @@ def index():
     # render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
 
+
 # web page that handles user query and displays model results
 @app.route('/go')
 def go():
@@ -142,9 +144,5 @@ def go():
     )
 
 
-def main():
-    app.run(debug=True)
-
-
 if __name__ == '__main__':
-    main()
+    app.run(debug=True)
